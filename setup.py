@@ -15,22 +15,22 @@ AUTHOR = metadata['author']
 EMAIL = metadata['email']
 
 requires = [
+    'httpx',
     'logbook>=0.12.3',
     'python-dateutil',
     'represent>=1.4.0',
-    'requests',
     'rush',
+    'sniffio',
 ]
 
 extras_require = dict()
 
 extras_require['test'] = [
-    'pytest>=3.0',
     'pytest-asyncio',
-    'responses',
+    'pytest-trio',
+    'pytest>=6.0',
+    'respx',
 ]
-
-extras_require['async'] = ['aiohttp~=3.6']
 
 extras_require['docstest'] = [
     'doc8',
